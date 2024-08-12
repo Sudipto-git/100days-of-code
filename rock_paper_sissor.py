@@ -83,10 +83,10 @@ while True:
 
 
     
-    print("Thank you for playing")
+    
     print("Do you want to play again?")
     play_again = input("Enter y for Yes and n for No: ")
-    if play_again == "N":
+    if play_again != "y":
+        print("Thank you for playing")
         break
-    else:
-        continue
+   

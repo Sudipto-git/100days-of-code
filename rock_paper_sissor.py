@@ -30,6 +30,7 @@ c =("""
 ---.__(___)
 """)
 while True:
+    
     print("Welcome to Rock, Paper, Scissors Game")
     user_input = input("Enter your choice: a for Rock, b for Paper, c for Scissors: ")
     option = ["a", "b", "c"]
@@ -83,3 +84,9 @@ while True:
 
     
     print("Thank you for playing")
+    print("Do you want to play again?")
+    play_again = input("Enter y for Yes and n for No: ")
+    if play_again == "N":
+        break
+    else:
+        continue

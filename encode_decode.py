@@ -1,5 +1,14 @@
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
+caeser_art = ["""                                                                  
+ ,adPPYba,  ,adPPYYba,   ,adPPYba,  ,adPPYba,  ,adPPYYba,  8b,dPPYba,  
+a8"     ""  ""     `Y8  a8P_____88  I8[    ""  ""     `Y8  88P'   "Y8  
+8b          ,adPPPPP88  8PP"""""""   `"Y8ba,   ,adPPPPP88  88          
+"8a,   ,aa  88,    ,88  "8b,   ,aa  aa    ]8I  88,    ,88  88          
+ `"Ybbd8"'  `"8bbdP"Y8   `"Ybbd8"'  `"YbbdP"'  `"8bbdP"Y8  88          
+                                                                  
+                                                                  """]
+
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
@@ -42,5 +51,6 @@ def caesar(original_text,shift_amount,encode_or_decode):
         output += alphabet[shifted_position]
         
     print(f"The {encode_or_decode}d text is {output}")
+    print(caeser_art[0])
     
 caesar(original_text = text,shift_amount = shift,encode_or_decode = direction)

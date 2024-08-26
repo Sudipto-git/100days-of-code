@@ -9,9 +9,6 @@ a8"     ""  ""     `Y8  a8P_____88  I8[    ""  ""     `Y8  88P'   "Y8
                                                                   
                                                                   """]
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
 
 # def encrypt(original_text,shift_amount):
 #     cipher_text = ""
@@ -53,4 +50,17 @@ def caesar(original_text,shift_amount,encode_or_decode):
     print(f"The {encode_or_decode}d text is {output}")
     print(caeser_art[0])
     
-caesar(original_text = text,shift_amount = shift,encode_or_decode = direction)
+should_continue = True
+while should_continue:
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+    
+    caesar(original_text = text,shift_amount = shift,encode_or_decode = direction)
+    
+    input("You want to do it again? Type 'yes' or 'no'\n").lower()
+    
+    if input == "no":
+        should_continue = False
+        print("Goodbye")
+    

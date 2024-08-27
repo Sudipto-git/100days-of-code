@@ -39,13 +39,18 @@ a8"     ""  ""     `Y8  a8P_____88  I8[    ""  ""     `Y8  88P'   "Y8
 def caesar(original_text,shift_amount,encode_or_decode):
     output = " "
     
-    for letter in original_text:
-        if encode_or_decode == "decode":
+    if encode_or_decode == "decode":
             shift_amount *= -1
+    
+    for letter in original_text:
+        if letter not in alphabet:
+            output += letter
+            
+        else:
         
-        shifted_position = alphabet.index(letter) + shift_amount
-        shifted_position %= len(alphabet)
-        output += alphabet[shifted_position]
+            shifted_position = alphabet.index(letter) + shift_amount
+            shifted_position %= len(alphabet)
+            output += alphabet[shifted_position]
         
     print(f"The {encode_or_decode}d text is {output}")
     print(caeser_art[0])
@@ -58,9 +63,10 @@ while should_continue:
     
     caesar(original_text = text,shift_amount = shift,encode_or_decode = direction)
     
-    input("You want to do it again? Type 'yes' or 'no'\n").lower()
+    again = input("You want to do it again? Type 'yes' or 'no'\n").lower()
     
-    if input == "no":
+    if again == "no":
         should_continue = False
         print("Goodbye")
+        
     

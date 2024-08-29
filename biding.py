@@ -33,6 +33,7 @@ def find_highest_bidder(bidding_dictionary):
 
 bids = {} #empthy dictionary to save the bids
 continue_bidding = True
+
 while continue_bidding :
     name = input("Enter your name: ")
     price = int(input("Enter your bid :$ "))

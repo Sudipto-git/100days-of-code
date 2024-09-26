@@ -18,5 +18,5 @@ def brute_force_crack(password_to_crack, max_length=4):
     return None
 
 # Example usage
-password = "aBii"
+password = "mohinee"
 brute_force_crack(password, max_length=4)

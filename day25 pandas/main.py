@@ -18,16 +18,16 @@
 
 import pandas
 
-# data = pandas.read_csv("/Users/sudipto/Documents/code/projects/100days of code/day25 pandas/weather_data.csv") 
-# print(data["temp"] )
-# print(type(data))
-# temp_lis = data["temp"].to_list()
-# print(temp_lis)
-# avg = sum(temp_lis)/len(temp_lis)
-# # print(avg)
-# # print(data["temp"].max())
-# print(data["condition"])
-# print(data.condition)
+data = pandas.read_csv("/Users/sudipto/Documents/code/projects/100days of code/day25 pandas/weather_data.csv") 
+print(data["temp"] )
+print(type(data))
+temp_lis = data["temp"].to_list()
+print(temp_lis)
+avg = sum(temp_lis)/len(temp_lis)
+# print(avg)
+# print(data["temp"].max())
+print(data["condition"])
+print(data.condition)
 
 # get data in row
 # print(data[data.day == data.day.max()])

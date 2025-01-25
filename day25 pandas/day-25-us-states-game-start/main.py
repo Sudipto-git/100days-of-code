@@ -27,10 +27,11 @@ for state in all_states:
     answer_state = screen.textinput(title = f"{len(gussed_states)}/50Guess the State", prompt="What's another state's name?").title()
     print(answer_state)
     if answer_state == "Exit":
-        missing_states = []
-        for state in all_states:
-            if state not in gussed_states:
-                missing_states.append(state)
+        missing_states = [states for states in all_states if states not in gussed_states]
+        # missing_states = [] 
+        # for state in all_states:
+        #     if state not in gussed_states:
+        #         missing_states.append(state)
         new_data = pandas.DataFrame(missing_states)
         new_data.to_csv("states_to_learn.csv")
         print("The game has ended")
